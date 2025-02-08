@@ -4,7 +4,7 @@
 #include<vector>
 #include<string>
 using namespace std;
-
+//这是关于链表的反转和删除倒数N个节点
 //关于如何找到尾节点
 //比如说1-2-3-4-5
 struct ListNode
