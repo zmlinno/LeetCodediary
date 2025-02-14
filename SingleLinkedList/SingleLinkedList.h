@@ -153,6 +153,40 @@ bool hasCycle(ListNode* head)
     return false;
 
 }
+
+//力扣21 合并两个有序链表
+ListNode *mergeTwoList(ListNode* list1,ListNode* list2)
+{
+    ListNode *dummy = new ListNode(-1); //创建哨兵节点
+    ListNode *tail = dummy; //维护最终链表的指针
+    
+    while(list1 && list2)
+    {
+        if(list1->val <= list2->val)
+        {
+            tail->next = list1;
+            list1 = list1->next;
+        }
+        else
+        {
+            tail->next = list2;
+            list2 = list2->next;
+        }
+        tail = tail->next; //移动尾指针
+    }
+    //处理剩余元素
+    if(list1)
+    {
+        tail->next = list1;
+    }
+    else
+    {
+        tail->next = list2;
+    }
+    return dummy->next;
+}
+
+
 //打印
 void printList(ListNode* head)
 {
