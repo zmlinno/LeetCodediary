@@ -185,8 +185,35 @@ ListNode *mergeTwoList(ListNode* list1,ListNode* list2)
     }
     return dummy->next;
 }
+ListNode *addTwoNumbers(ListNode *l1,ListNode *l2)
+{
+    ListNode *dummy = new ListNode(-1);
+    ListNode *tail = dummy;
+    int carry = 0;
 
+    while(l1||l2||carry)
+    {
+        int sum = carry;
+        if(l1)
+        {
+            sum += l1->val;
+            l1 = l1->next;
 
+        }
+        if(l2)
+        {
+            sum += l2->val;
+            l2 = l2->next;
+        }
+
+        carry = sum/10; //计算进位
+        sum = sum%10; //计算当前位
+
+        tail->next = new ListNode(sum);
+        tail = tail->next;
+    }
+    return dummy->next;
+}
 //打印
 void printList(ListNode* head)
 {
