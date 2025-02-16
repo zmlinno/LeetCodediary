@@ -3,7 +3,7 @@
 #include<vector>
 #include<string>
 using namespace std;
-
+//这不是单链表的增删查改，是leetcode
 struct ListNode
 {
     int val;
