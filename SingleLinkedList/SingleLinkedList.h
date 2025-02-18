@@ -214,6 +214,30 @@ ListNode *addTwoNumbers(ListNode *l1,ListNode *l2)
     }
     return dummy->next;
 }
+
+//力扣24 两两交换链表中的节点
+ListNode* TwoNode(ListNode*head)
+{
+    if(!head||!head->next)return;
+    ListNode* dummy = new ListNode(0);
+    ListNode* prev = dummy;
+
+    while(prev->next && prev->next->next)
+    {
+        ListNode* first = prev->next;
+        ListNode* second = prev->next->next;
+
+        //交换两两节点
+        first->next = second->next;
+        second->next = first;
+        prev->next = second;
+
+        //移动prev指针到下一对需要交换到节点
+        prev = first;
+    }
+    return dummy->next;
+
+}
 //打印
 void printList(ListNode* head)
 {
