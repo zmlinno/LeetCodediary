@@ -1,5 +1,6 @@
 #include<iostream>
 #include"DoubleList.cpp"
+//这是关于双向链表的增删查改
 using namespace std;
 int main() {
         ListNode* list = ListCreate();
