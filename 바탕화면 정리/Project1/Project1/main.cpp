@@ -1,11 +1,11 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 #include<algorithm>
 #include<vector>
 #include<string>
 #include<climits>
 using namespace std;
-
+很好
 vector<int>solution(vector<string>wallpaper)
 {
 	int lux = INT_MAX, luy = INT_MAX, rdx = INT_MIN, rdy = INT_MIN;
