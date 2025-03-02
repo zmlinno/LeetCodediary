@@ -13,7 +13,7 @@
 #include<sstream>
 #include<fstream>
 using namespace std;
-
+//今天也不能忘了
 // 错误检查宏
 // 错误检查宏
 #define CUDA_CHECK(err) \
