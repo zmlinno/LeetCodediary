@@ -3,17 +3,17 @@
 #include <algorithm>
 #include <unordered_set>
 using namespace std;
-
+//1235
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-		//Ê¹ÓÃ¹şÏ£±íÀ´È·±£Î¨Ò»ĞÔ¡£
+		//ä½¿ç”¨å“ˆå¸Œè¡¨æ¥ç¡®ä¿å”¯ä¸€æ€§ã€‚
         unordered_set<int> set1(nums1.begin(), nums1.end());
         unordered_set<int> result;
 
         for (int num : nums2) {
             if (set1.count(num)) {
-                result.insert(num); //²åÈëµ½½á¹û¼¯ºÏÖĞ£¬×Ô¶¯È¥ÖØ¡£
+                result.insert(num); //æ’å…¥åˆ°ç»“æœé›†åˆä¸­ï¼Œè‡ªåŠ¨å»é‡ã€‚
             }
         }
 
@@ -29,7 +29,7 @@ int main() {
 
     vector<int> result = solution.intersection(nums1, nums2);
 
-    cout << "½»¼¯½á¹û: ";
+    cout << "äº¤é›†ç»“æœ: ";
     for (int num : result) {
         cout << num << " ";
     }
